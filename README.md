@@ -3,9 +3,9 @@
 > Бомбический проект, который взорвет этот мир(ну или хотя бы спасет от отчисления)
 
 ##Usages
-[vue2](https://vuejs.org/)
-[vue-router2](https://router.vuejs.org/ru/) 
-[bootstrap-vue](https://bootstrap-vue.js.org/)
+* [vue2](https://vuejs.org/)
+* [vue-router2](https://router.vuejs.org/ru/) 
+* [bootstrap-vue](https://bootstrap-vue.js.org/)
 
 ## Build Setup
 
@@ -24,7 +24,8 @@ npm run build
 ##Server
 
 На сервер заливаем содержимое папки dist в корень
-
+kek|xuek
+-----|-----
 ip | 79.172.112.0 
 login | local
 password | remote
