@@ -33,3 +33,7 @@ login | local
 password | remote
 path | ~/web-server
 adress | hackathoner.tk
+
+##Туториалы
+
+[django-vue](https://dev.to/rpalo/vue-on-django-part-1)
