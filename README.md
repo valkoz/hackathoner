@@ -24,7 +24,8 @@ npm run build
 ##Server
 
 На сервер заливаем содержимое папки dist в корень
-kek|xuek
+
+kek | xuek
 ----- | -----
 ip | 79.172.112.0 
 login | local
