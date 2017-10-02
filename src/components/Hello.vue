@@ -27,11 +27,11 @@
 </b-navbar> 
 
 <b-row class="maincontent">
-        <b-col xl="3" lg="4" md="6" sm="12" v-for="hackathon in hackathons">
-          <card v-bind:imglink="hackathon.someLink" 
-                v-bind:text="hackathon.someText" 
-                v-bind:title="hackathon.someTitle"
-                v-bind:id="hackathon.id">        
+        <b-col xl="3" lg="4" md="6" sm="12" v-for="hack in hacks">
+          <card v-bind:imglink="hack.someLink" 
+                v-bind:text="hack.someText" 
+                v-bind:title="hack.someTitle"
+                v-bind:id="hack.id">        
           </card>
         </b-col>
     </b-row>
@@ -46,40 +46,9 @@ export default {
   components: {
     Card
   },
-  data () {
-    return {
-      hackathons: [
-        {
-          id: "1",
-          someLink: "../static/img/s7.png",
-          someText: "Первый хакатон, который проходит при поддержке авиакомпании. Только 50 отобранных команд смогут побороться за главный приз 600 000 рублей в 5 номинациях. ",
-          someTitle: "#s7hackathon",
-        },
-        {
-          id: "2",
-          someLink: "../static/img/mABBYYlity.png",
-          someText: "24-часовой Хакатон по разработке сервисов для мобильных платформ с применением технологий интеллектуальной обработки информации, организованный компанией ABBYY - мировым разработчиком решений в этой области.",
-          someTitle: "mABBYYlity",
-        },
-        {
-          id: "3",
-          someLink: "../static/img/otkrutue.png",
-          someText: "Банк «Открытие» проведет хакатон для разработчиков Codility​ в рамках серии хакатонов Open Fights. На хакатоне участники выберут одно из розничных банковских направлений и, используя открытый API банка, за два дня напишут мобильное или веб-приложение.",
-          someTitle: "Codility",
-        },
-        {
-          id: "4",
-          someLink: "../static/img/funtech.png",
-          someText: "Хакатон — это отличная возможность развить свой проект, дополнить команду разработчиками, дизайнерами, маркетологами, проконсультироваться с ведущими экспертами в области, а также получить денежные призы и возможность пройти отбор в главный FunTech-акселератор страны — FunCubator.",
-          someTitle: "FunTech Hackathon",
-        },
-        {
-          id: "5",
-          someLink: "../static/img/luxoft.png",
-          someText: "Не упустите уникальную возможность всего за 24 часа развить свои навыки в CV, познакомиться с ведущими специалистами в этой области, выиграть крутые призы от Luxoft и, самое главное, хакнуть поистине непростую задачу!",
-          someTitle: "HackCV",
-        }
-      ]
+  computed: {
+    hacks () {
+      return this.$store.state.hacks
     }
   }
 }
