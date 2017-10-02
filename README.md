@@ -25,7 +25,7 @@ npm run build
 
 На сервер заливаем содержимое папки dist в корень
 kek|xuek
------|-----
+----- | -----
 ip | 79.172.112.0 
 login | local
 password | remote
