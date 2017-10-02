@@ -1,6 +1,11 @@
-# hackathoner
+# Hackathoner
 
-> A Vue.js project
+> Бомбический проект, который взорвет этот мир(ну или хотя бы спасет от отчисления)
+
+##Usages
+[vue2](https://vuejs.org/)
+[vue-router2](https://router.vuejs.org/ru/) 
+[bootstrap-vue](https://bootstrap-vue.js.org/)
 
 ## Build Setup
 
@@ -16,22 +21,12 @@ npm run build
 
 ```
 
+##Server
+
 На сервер заливаем содержимое папки dist в корень
-``` bash
-#Есть ssh, ftp, apache, mysql, postgres
-#ip в данный момент: 
-79.172.112.0
 
-#Адрес
-hackathoner.tk
-
-#Логин: 
-local
-
-#Пароль: 
-remote
-
-#Можно ради интереса сайт туда залить в папку 
-~/web-server
-```
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+ip | 79.172.112.0 
+login | local
+password | remote
+path | ~/web-server
+adress | hackathoner.tk
