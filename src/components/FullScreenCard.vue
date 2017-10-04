@@ -1,33 +1,24 @@
 <template>
   <div class="fullScreenCard">
     fullScreenCard {{id}} 
-    {{fullPage.name}}
-    {{firstHack[0].name}}
+    {{currentHack[0].name}}
+    {{currentHack[0].description}}
+    {{currentHack[0].imglink}}
   </div>
 </template>
 
 <script>
 export default {
-  props: ['id'], // from Card
+  props: ['id'], // from router
   name: 'fullScreenCard',
-  data() {
-    return {
-      fullPage : {
-        name: 'uxoft.png',
-        description: 'Не',
-        imglink: 'HackCV'
-      }
-    }
-  },
   computed: {
-    firstHack () {
-      return this.$store.state.firstHack
+    currentHack () {
+      return this.$store.state.currentHack
     }
   },
   methods: {
     getFullPage: function() {
-      this.$store.dispatch('getFirstHack')
-      this.fullPage.name = "kekeek"
+      this.$store.dispatch('getCurrentHack', {byId: this.id})
     }
   },
   created: function(){

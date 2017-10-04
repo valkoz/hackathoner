@@ -8,7 +8,7 @@ const apiRoot = 'http://localhost:8000'
 
 const store = new Vuex.Store({
   state: {
-    firstHack: [],
+    currentHack: [],
     hacks: []    
   },
   mutations: {
@@ -16,8 +16,8 @@ const store = new Vuex.Store({
       state.hacks = response.body
       console.log(response.body)
     },
-    'GET_FIRST_HACK': function (state, response) {
-      state.firstHack = response.body
+    'GET_CURRENT_HACK': function (state, response) {
+      state.currentHack = response.body
       console.log(response.body)
     },
     'ADD_HACK': function (state, hack) {
@@ -37,9 +37,10 @@ const store = new Vuex.Store({
         .then((response) => store.commit('GET_HACKS', response))
         .catch((error) => store.commit('API_FAIL', error))
     },
-    getFirstHack (store) {
-      return api.get('http://localhost:8081/hacks/1')
-        .then((response) => store.commit('GET_FIRST_HACK', response))
+    getCurrentHack (store, payload) {
+      //alert(payload.byId)
+      return api.get('http://localhost:8081/hacks/' + payload.byId + '/')
+        .then((response) => store.commit('GET_CURRENT_HACK', response))
         .catch((error) => store.commit('API_FAIL', error))
     },
     addHack (store, hack) {

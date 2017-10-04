@@ -31,7 +31,7 @@
           <card v-bind:imglink="hack.imglink" 
                 v-bind:text="hack.description"
                 v-bind:title="hack.name"
-                v-bind:id="'' + index">        
+                v-bind:id="index + 1 + ''">        
           </card>
         </b-col>
     </b-row>
