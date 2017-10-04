@@ -7,6 +7,7 @@
 * [vue-router2](https://router.vuejs.org/ru/) 
 * [bootstrap-vue](https://bootstrap-vue.js.org/)
 * [vuex](https://vuex.vuejs.org/ru/intro.html)
+* [vue-resourse](https://github.com/pagekit/vue-resource)
 
 ## Build Setup
 
