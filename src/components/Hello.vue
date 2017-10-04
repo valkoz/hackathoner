@@ -28,7 +28,11 @@
 
 <b-row class="maincontent">
         <b-col xl="3" lg="4" md="6" sm="12" v-for="hack in hacks" :key="hack.hack_name">
-          {{ hack.hack_name }}
+          <card v-bind:imglink="hack.hack_imglink" 
+                v-bind:text="hack.hack_description"
+                v-bind:title="hack.hack_name"
+                v-bind:id="hack.id">        
+          </card>
         </b-col>
     </b-row>
   </div>
