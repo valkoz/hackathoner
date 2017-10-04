@@ -1,19 +1,37 @@
 <template>
   <div class="fullScreenCard">
     fullScreenCard {{id}} 
-    {{text}}
-    {{title}}
-    {{imglink}}
+    {{fullPage.name}}
+    {{firstHack[0].name}}
   </div>
 </template>
 
 <script>
 export default {
-   props: ['id', 'title', 'text', 'imglink'], // from Card
+  props: ['id'], // from Card
   name: 'fullScreenCard',
-  data () {
+  data() {
     return {
+      fullPage : {
+        name: 'uxoft.png',
+        description: 'Не',
+        imglink: 'HackCV'
+      }
     }
+  },
+  computed: {
+    firstHack () {
+      return this.$store.state.firstHack
+    }
+  },
+  methods: {
+    getFullPage: function() {
+      this.$store.dispatch('getFirstHack')
+      this.fullPage.name = "kekeek"
+    }
+  },
+  created: function(){
+    this.getFullPage()
   }
 }
 </script>

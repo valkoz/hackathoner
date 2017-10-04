@@ -27,11 +27,11 @@
 </b-navbar> 
 
 <b-row class="maincontent">
-        <b-col xl="3" lg="4" md="6" sm="12" v-for="hack in hacks" :key="hack.hack_name">
+        <b-col xl="3" lg="4" md="6" sm="12" v-for="(hack, index) in hacks" :key="hack.hack_name">
           <card v-bind:imglink="hack.imglink" 
                 v-bind:text="hack.description"
                 v-bind:title="hack.name"
-                v-bind:id="hack.id">        
+                v-bind:id="'' + index">        
           </card>
         </b-col>
     </b-row>

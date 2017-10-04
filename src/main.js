@@ -21,3 +21,5 @@ const v = new Vue({
 })
 
 v.$store.dispatch('getHacks')
+
+//v.$store.dispatch('getFirstHack')

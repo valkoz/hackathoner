@@ -19,12 +19,7 @@
 <script>
 export default {
   props: ['id', 'imglink', 'text', 'title'],
-  name: 'card',
-  data () {
-    return {
-      id, title, text, imglink //for FullScreenCard 
-    }
-  }
+  name: 'card'
 }
 </script>
 
