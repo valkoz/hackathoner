@@ -27,12 +27,8 @@
 </b-navbar> 
 
 <b-row class="maincontent">
-        <b-col xl="3" lg="4" md="6" sm="12" v-for="hack in hacks">
-          <card v-bind:imglink="hack.someLink" 
-                v-bind:text="hack.someText" 
-                v-bind:title="hack.someTitle"
-                v-bind:id="hack.id">        
-          </card>
+        <b-col xl="3" lg="4" md="6" sm="12" v-for="hack in hacks" :key="hack.hack_name">
+          {{ hack.hack_name }}
         </b-col>
     </b-row>
   </div>

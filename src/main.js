@@ -12,10 +12,12 @@ import store from './store/store.js'
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false
 
-new Vue({
+const v = new Vue({
   el: '#app',
   router,
   template: '<App/>',
   store: store,
   components: { App }
 })
+
+v.$store.dispatch('getHacks')
