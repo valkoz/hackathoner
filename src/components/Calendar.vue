@@ -1,17 +1,14 @@
 <template>
-  <div class="card">
-    <div>
-      <b-card title="kek"
-          img-src="lol"
-          img-alt="Image"
-          img-top
+  <div class="card-container">
+      <b-card title="19 Октября 2017"
+          sub-title="18:00"
           tag="article"
+          class="card"
           >
       <p class="card-text">
           Hello, I'm calendar content
       </p>
       </b-card>
-    </div>
   </div>
 </template>
 
@@ -23,7 +20,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.card-container {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
 .card {
-  margin-top: 10px
+  margin-top: 0px;
+  padding-bottom: 0px;
 }
 </style>

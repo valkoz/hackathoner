@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import store from './store/store.js'
 
+import YmapPlugin from 'vue-yandex-maps'
+Vue.use(YmapPlugin)
 
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false

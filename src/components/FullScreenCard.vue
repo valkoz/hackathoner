@@ -11,6 +11,7 @@
               img-alt="Image"
               img-top
               tag="article"
+              class="card"
               >
           <p class="card-text">
             fullScreenCard {{id}} 
@@ -35,7 +36,7 @@ export default {
   name: 'fullScreenCard',
   components: {
     Calendar,
-    Navigation
+    Navigation,
   },
   computed: {
     currentHack () {
@@ -52,3 +53,12 @@ export default {
   }
 }
 </script>
+
+<style>
+.maincontent {
+  margin: 20px;
+}
+.card {
+  margin-top: 20px;
+}
+</style>

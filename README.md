@@ -8,6 +8,7 @@
 * [bootstrap-vue](https://bootstrap-vue.js.org/)
 * [vuex](https://vuex.vuejs.org/ru/intro.html)
 * [vue-resourse](https://github.com/pagekit/vue-resource)
+* [vue-yandex-maps](https://www.npmjs.com/package/vue-yandex-maps)
 
 ## Build Setup
 
