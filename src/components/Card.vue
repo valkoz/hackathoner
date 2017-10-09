@@ -1,18 +1,16 @@
 <template>
-  <div class="card">
-    <div>
+  <div class="card-container">
       <b-card :title="title"
           :img-src="imglink"
           img-alt="Image"
           img-top
           tag="article"
-          >
+          class="card">
       <p class="card-text">
         {{text}}
       </p>
       <router-link :to="id">Принять участие</router-link>
       </b-card>
-    </div>
   </div>
 </template>
 
@@ -25,7 +23,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.card-container {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
 .card {
-  margin-top: 10px
+  margin-top: 0px;
+  padding-bottom: 0px;
 }
 </style>
