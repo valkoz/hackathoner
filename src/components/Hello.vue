@@ -7,7 +7,7 @@
 
 <b-row class="maincontent">
         <b-col xl="3" lg="4" md="6" sm="12" v-for="(hack, index) in hacks" :key="hack.hack_name">
-          <card v-bind:imglink="hack.imglink" 
+          <card v-bind:imglink="hack.img_link" 
                 v-bind:text="hack.description"
                 v-bind:title="hack.name"
                 v-bind:id="index + 1 + ''">        
@@ -36,6 +36,8 @@ export default {
 
 <style>
 .maincontent {
-  margin: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 </style>

@@ -7,15 +7,14 @@
     <b-row class="maincontent">
         <b-col xl="8" lg="8" md="8" sm="12" >
           <b-card :title="currentHack[0].name"
-              :img-src="currentHack[0].imglink"
+              :img-src="currentHack[0].img_link"
               img-alt="Image"
               img-top
               tag="article"
               class="card"
               >
-          <p class="card-text">
-            fullScreenCard {{id}} 
-            {{currentHack[0].description}}
+          <p class="card-text"> 
+            {{currentHack[0].full_description}}
           </p>
           </b-card>
         </b-col>

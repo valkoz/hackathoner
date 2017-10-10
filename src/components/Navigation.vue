@@ -1,7 +1,7 @@
 <template>
 
   <div class="card-container">
-      <b-card 
+      <b-card
           tag="article"
           class="card"
           >
