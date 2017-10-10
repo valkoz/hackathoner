@@ -9,7 +9,7 @@
       <p class="card-text">
         {{text}}
       </p>
-      <router-link :to="id">Принять участие</router-link>
+      <router-link :to="id">Узнать подробную информацию</router-link>
       </b-card>
   </div>
 </template>

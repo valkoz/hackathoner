@@ -2,12 +2,10 @@
   <div class="card-container">
 
       <b-card title="Предложить событие"
-          tag="article"
-          class="card"
-          >
-      <p class="card-text">
-      </p>
-      </b-card>
+              tag="article"
+              class="text-center"
+              >
+          </b-card>
   </div>
 </template>
 

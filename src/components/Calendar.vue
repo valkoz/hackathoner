@@ -6,7 +6,7 @@
           class="card"
           >
       <p class="card-text">
-          <h5><b-button>Добавить в календарь</b-button></h5>
+          <h5><b-button>Добавить в Google календарь</b-button></h5>
           <h5>БЦ "Водный". Москва, Головинское шоссе, д.5</h5>
       </p>
       </b-card>
