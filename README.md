@@ -9,6 +9,8 @@
 * [vuex](https://vuex.vuejs.org/ru/intro.html)
 * [vue-resourse](https://github.com/pagekit/vue-resource)
 * [vue-yandex-maps](https://www.npmjs.com/package/vue-yandex-maps)
+* [vue-awesome](https://justineo.github.io/vue-awesome/demo/) - не забыть изменить импорт в main.js на конкретные иконки, а не целиком все
+* [vue-social-sharing](https://www.npmjs.com/package/vue-social-sharing)
 
 ## Build Setup
 

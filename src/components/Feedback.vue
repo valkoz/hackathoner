@@ -1,13 +1,11 @@
 <template>
   <div class="card-container">
-      <b-card title="19 Октября 2017, 18:00"
-          sub-title="online"
+
+      <b-card title="Предложить событие"
           tag="article"
           class="card"
           >
       <p class="card-text">
-          <h5><b-button>Добавить в календарь</b-button></h5>
-          <h5>БЦ "Водный". Москва, Головинское шоссе, д.5</h5>
       </p>
       </b-card>
   </div>
@@ -15,7 +13,7 @@
 
 <script>
 export default {
-  name: 'calendar'
+  name: 'feedback'
 }
 </script>
 

@@ -21,6 +21,8 @@
         <b-col xl="4" lg="4" md="4" sm="12" >
           <calendar></calendar>
           <navigation></navigation>
+          <share></share>
+          <feedback></feedback>
         </b-col>
     </b-row>
   </div>
@@ -29,6 +31,8 @@
 <script>
 import Calendar from './Calendar.vue'
 import Navigation from './Navigation.vue'
+import Feedback from './Feedback.vue'
+import Share from './Share.vue'
 
 export default {
   props: ['id'], // from router
@@ -36,6 +40,8 @@ export default {
   components: {
     Calendar,
     Navigation,
+    Share,
+    Feedback
   },
   computed: {
     currentHack () {
