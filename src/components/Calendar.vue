@@ -1,17 +1,18 @@
 <template>
   <div class="card-container">
-      <b-card title="19 Октября 2017, 18:00"
-          sub-title="online"
+      <b-card :title="beginDateTime"
+          :sub-title="status"
           tag="article"
           class="text-center"
           >
       <p class="card-text">
-          <add-to-calendar title="The Title" 
-                 location="Moscow, Russia" 
-                 :start="new Date()"
-                 :end="new Date((new Date).setDate((new Date).getDate() + 1))"
-                 details="description" 
-                 inline-template>
+          <add-to-calendar 
+                :title="title" 
+                :location="place" 
+                :start="beginDate"
+                :end="beginDate"
+                details="description" 
+                inline-template>
             <span>
               <google-calendar id="google-calendar">
                   <h5><b-button>Добавить в Google календарь</b-button></h5>
@@ -21,7 +22,7 @@
               </microsoft-calendar>
             </span>
           </add-to-calendar>
-          <h5>БЦ "Водный". Москва, Головинское шоссе, д.5</h5>
+          <h5> {{place}} </h5>
       </p>
       </b-card>
   </div>
@@ -29,6 +30,7 @@
 
 <script>
 export default {
+  props: ['title', 'beginDateTime', 'beginDate', 'beginTime', 'place', 'status'],
   name: 'calendar'
 }
 </script>

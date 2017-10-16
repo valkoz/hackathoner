@@ -2,11 +2,10 @@
   <div class="card-container">
       <b-card class="card" >
         <p class="card-text">
-          <social-sharing url="https://vuejs.org/"
-                              title="The Progressive JavaScript Framework"
-                              description="Intuitive, Fast and Composable MVVM for building interactive interfaces."
-                              quote="Vue is a progressive framework for building user interfaces."
-                              hashtags="hackathon"
+          <social-sharing :url="url"
+                              :title="title"
+                              :description="place"
+                              :quote="place"
                               inline-template>
           <div class="share">
               <network network="facebook">
@@ -36,6 +35,7 @@
 
 <script>
 export default {
+  props: ['url','title','description','place'],
   name: 'share'
 }
 </script>

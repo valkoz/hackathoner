@@ -19,9 +19,26 @@
           </b-card>
         </b-col>
         <b-col xl="4" lg="4" md="4" sm="12" >
-          <calendar></calendar>
-          <navigation></navigation>
-          <share></share>
+          <calendar 
+            v-bind:title="currentHack[0].name"
+            v-bind:beginDateTime="currentHack[0].begin_date + ', ' + currentHack[0].start_time"
+            v-bind:beginDate="currentHack[0].start_date"
+            v-bind:beginTime="currentHack[0].start_time"
+            v-bind:endDate="currentHack[0].end_date"
+            v-bind:place="currentHack[0].place"
+            v-bind:status="currentHack[0].status">
+          </calendar>
+          <navigation
+            v-bind:coordinateX="currentHack[0].coordinateX"
+            v-bind:coordinateY="currentHack[0].coordinateY"
+            v-bind:place="currentHack[0].place">
+          </navigation>
+          <share
+            v-bind:title="currentHack[0].name"
+            v-bind:place="currentHack[0].place"
+            v-bind:description="currentHack[0].description"
+            v-bind:url="currentPage"
+          ></share>
           <feedback></feedback>
         </b-col>
     </b-row>
@@ -46,6 +63,9 @@ export default {
   computed: {
     currentHack () {
       return this.$store.state.currentHack
+    },
+    currentPage () {
+      return this.$route.query.page
     }
   },
   methods: {
