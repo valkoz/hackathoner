@@ -8,24 +8,25 @@
                               :quote="place"
                               inline-template>
           <div class="share">
-              <network network="facebook">
-                <icon name="facebook" scale="3" style="margin-left: 10px; margin-right: 10px;"></icon>
-              </network>
-              <network network="googleplus">
-                <icon name="google-plus" scale="3" style="margin-left: 10px; margin-right: 10px;"></icon>
-              </network>
+            
               <network network="telegram">
-                <icon name="telegram" scale="3" style="margin-left: 10px; margin-right: 10px;"></icon>
+                <b-button class="original-button" style="height: 80px">
+                  <icon name="telegram" scale="4" style="margin-left: 10px; margin-right: 10px;"></icon>
+                </b-button>
               </network>
+            
               <network network="twitter">
-                <icon name="twitter" scale="3" style="margin-left: 10px; margin-right: 10px;"></icon>
+                <b-button class="original-button " style="height: 80px">
+                  <icon name="twitter" scale="4" style="margin-left: 10px; margin-right: 10px;"></icon>
+                </b-button>
               </network>
+            
               <network network="vk">
-                <icon name="vk" scale="3" style="margin-left: 10px; margin-right: 10px;"></icon>
+                <b-button class="original-button" style="height: 80px">
+                  <icon name="vk" scale="4" style="margin-left: 10px; margin-right: 10px; "></icon>
+                </b-button>
               </network>
-              <network network="whatsapp">
-                <icon name="whatsapp" scale="3" style="margin-left: 10px; margin-right: 10px;"></icon>
-              </network>
+            
           </div>
         </social-sharing>
         </p>
@@ -52,5 +53,9 @@ export default {
 }
 .share {
   text-align: center;
+}
+
+.share-button {
+  height: 55px;
 }
 </style>

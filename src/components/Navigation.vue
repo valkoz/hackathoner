@@ -20,7 +20,7 @@
               marker-type="placemark"
               :coords="[coordinateX, coordinateY]"
               :hint-content="place"
-              :icon="{color: 'red'}"
+              :icon="{color: '#5085A5'}"
               cluster-name="1"
           ></ymap-marker>
 

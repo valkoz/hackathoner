@@ -9,7 +9,7 @@
       <p class="card-text">
         {{text}}
       </p>
-      <router-link :to="id">Узнать подробную информацию</router-link>
+      <router-link :to="id" style="color: #4d6d9a;"><button class="original-button" id="more"><span>Подробнее</span></button></router-link>
       </b-card>
   </div>
 </template>
@@ -21,7 +21,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .card-container {
   margin-top: 20px;
@@ -30,5 +29,10 @@ export default {
 .card {
   margin-top: 0px;
   padding-bottom: 0px;
+}
+#more {
+  font-size: 16px;
+  float: right;
+  margin: 0px;
 }
 </style>

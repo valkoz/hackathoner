@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-  <b-navbar toggleable="md" type="dark" variant="primary">
+  <b-navbar toggleable="md" type="dark" class="navbar" >
     <b-nav-toggle target="nav_collapse"></b-nav-toggle>
     <b-navbar-brand href="#">Hackathoner</b-navbar-brand>
   </b-navbar> 
@@ -14,6 +14,7 @@
           </card>
         </b-col>
     </b-row>
+    <footer class="footer"></footer>
   </div>
 </template>
 
@@ -39,5 +40,8 @@ export default {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
+}
+.navbar {
+  background-color: #5085A5;
 }
 </style>
