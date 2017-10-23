@@ -10,8 +10,6 @@
           <h2>{{beginDate}}</h2>
           <icon name="clock-o" scale="4" class="icon"></icon> 
           <h2>{{beginTime}}</h2>
-          <h6>{{status}}</h6>
-
 
           <add-to-calendar 
                 :title="title" 

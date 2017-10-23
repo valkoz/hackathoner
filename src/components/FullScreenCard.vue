@@ -30,11 +30,16 @@
             v-bind:status="currentHack[0].status"
             v-bind:officialSite="currentHack[0].site_link">
           </calendar>
-          <navigation
-            v-bind:coordinateX="currentHack[0].coordinateX"
-            v-bind:coordinateY="currentHack[0].coordinateY"
-            v-bind:place="currentHack[0].place">
-          </navigation>
+
+          <div v-if="currentHack[0].place != 'online'">
+            <navigation
+              v-bind:coordinateX="currentHack[0].coordinateX"
+              v-bind:coordinateY="currentHack[0].coordinateY"
+              v-bind:place="currentHack[0].place">
+            </navigation>
+          </div>
+          
+
           <share
             v-bind:title="currentHack[0].name"
             v-bind:place="currentHack[0].place"
