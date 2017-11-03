@@ -10,7 +10,7 @@
           <card v-bind:imglink="hack.img_link" 
                 v-bind:text="hack.description"
                 v-bind:title="hack.name"
-                v-bind:id="index + 2 + ''">     <!-- Это костыль, число 2 увеличится при удалении записи!!! надо решать че почем с роутером-->    
+                v-bind:id="index + ''">     <!-- Это костыль, число 2 увеличится при удалении записи!!! надо решать че почем с роутером-->    
           </card>
         </b-col>
     </b-row>

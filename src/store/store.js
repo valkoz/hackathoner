@@ -4,8 +4,6 @@ import api from './api.js'
 
 Vue.use(Vuex) 
 
-const apiRoot = 'http://localhost:8000'
-
 const store = new Vuex.Store({
   state: {
     currentHack: [],
@@ -39,7 +37,7 @@ const store = new Vuex.Store({
     },
     getCurrentHack (store, payload) {
       //alert(payload.byId)
-      return api.get('http://localhost:8081/hacks/' + payload.byId + '/')
+      return api.get('http://localhost:8081/hacks/by-id/' + payload.byId + '/')
         .then((response) => store.commit('GET_CURRENT_HACK', response))
         .catch((error) => store.commit('API_FAIL', error))
     },
