@@ -31,13 +31,13 @@ const store = new Vuex.Store({
   },
   actions: {
     getHacks (store) {
-      return api.get('http://localhost:8081/hacks/')
+      return api.get('http://82.199.101.40:80/hacks/')
         .then((response) => store.commit('GET_HACKS', response))
         .catch((error) => store.commit('API_FAIL', error))
     },
     getCurrentHack (store, payload) {
       //alert(payload.byId)
-      return api.get('http://localhost:8081/hacks/by-id/' + payload.byId + '/')
+      return api.get('http://82.199.101.40:80/hacks/by-id/' + payload.byId )
         .then((response) => store.commit('GET_CURRENT_HACK', response))
         .catch((error) => store.commit('API_FAIL', error))
     },
