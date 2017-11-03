@@ -7,43 +7,43 @@
     <b-row class="maincontent">
         <b-col xl="8" lg="7" md="6" sm="12" >
           <b-card 
-              :img-src="currentHack[0].img_link"
+              :img-src="currentHack.img_link"
               img-alt="Image"
               img-top
               tag="article"
               class="card"
               >
           <p class="card-text"> 
-            <h1>{{currentHack[0].name}}</h1>
-            <div class="description" v-html = "currentHack[0].full_description"></div>
+            <h1>{{currentHack.name}}</h1>
+            <div class="description" v-html = "currentHack.full_description"></div>
           </p>
           </b-card>
         </b-col>
         <b-col xl="4" lg="5" md="6" sm="12">
           <calendar 
-            v-bind:title="currentHack[0].name"
-            v-bind:beginDateTime="currentHack[0].begin_date + ', ' + currentHack[0].start_time"
-            v-bind:beginDate="currentHack[0].begin_date"
-            v-bind:beginTime="currentHack[0].start_time"
-            v-bind:endDate="currentHack[0].end_date"
-            v-bind:place="currentHack[0].place"
-            v-bind:status="currentHack[0].status"
-            v-bind:officialSite="currentHack[0].site_link">
+            v-bind:title="currentHack.name"
+            v-bind:beginDateTime="currentHack.begin_date + ', ' + currentHack.start_time"
+            v-bind:beginDate="currentHack.begin_date"
+            v-bind:beginTime="currentHack.start_time"
+            v-bind:endDate="currentHack.end_date"
+            v-bind:place="currentHack.place"
+            v-bind:status="currentHack.status"
+            v-bind:officialSite="currentHack.site_link">
           </calendar>
 
-          <div v-if="currentHack[0].place != 'online'">
+          <div v-if="currentHack.place != 'online'">
             <navigation
-              v-bind:coordinateX="currentHack[0].coordinateX"
-              v-bind:coordinateY="currentHack[0].coordinateY"
-              v-bind:place="currentHack[0].place">
+              v-bind:coordinateX="currentHack.coordinateX"
+              v-bind:coordinateY="currentHack.coordinateY"
+              v-bind:place="currentHack.place">
             </navigation>
           </div>
           
 
           <share
-            v-bind:title="currentHack[0].name"
-            v-bind:place="currentHack[0].place"
-            v-bind:description="currentHack[0].description"
+            v-bind:title="currentHack.name"
+            v-bind:place="currentHack.place"
+            v-bind:description="currentHack.description"
             v-bind:url="currentPage"
           ></share>
           <!--<feedback></feedback>-->
