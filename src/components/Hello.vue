@@ -3,6 +3,7 @@
   <b-navbar toggleable="md" type="dark" class="navbar" >
     <b-nav-toggle target="nav_collapse"></b-nav-toggle>
     <b-navbar-brand href="#">Hackathoner</b-navbar-brand>
+    <b-navbar-brand href="/static/about.html">About</b-navbar-brand>
   </b-navbar> 
 
 <b-row class="maincontent">
