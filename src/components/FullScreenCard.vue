@@ -3,24 +3,25 @@
   <b-navbar toggleable="md" type="dark" class="navbar">
     <b-nav-toggle target="nav_collapse"></b-nav-toggle>
     <b-navbar-brand href="/">Hackathoner</b-navbar-brand>
+    <b-navbar-brand href="/static/about.html">About</b-navbar-brand>
   </b-navbar>
     <b-row class="maincontent">
         <b-col xl="8" lg="7" md="6" sm="12" >
-          <b-card 
+          <b-card
               :img-src="currentHack.img_link"
               img-alt="Image"
               img-top
               tag="article"
               class="card"
               >
-          <p class="card-text"> 
+          <p class="card-text">
             <h1>{{currentHack.name}}</h1>
             <div class="description" v-html = "currentHack.full_description"></div>
           </p>
           </b-card>
         </b-col>
         <b-col xl="4" lg="5" md="6" sm="12">
-          <calendar 
+          <calendar
             v-bind:title="currentHack.name"
             v-bind:beginDateTime="currentHack.begin_date + ', ' + currentHack.start_time"
             v-bind:beginDate="currentHack.begin_date"
@@ -38,7 +39,7 @@
               v-bind:place="currentHack.place">
             </navigation>
           </div>
-          
+
 
           <share
             v-bind:title="currentHack.name"

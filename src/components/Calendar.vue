@@ -1,22 +1,22 @@
 <template>
   <div class="card-container">
-      <b-card 
+      <b-card
           tag="article"
           class="text-center"
           >
       <p class="card-text">
-        
-          <icon name="calendar" scale="4" class="icon"></icon> 
+
+          <icon name="calendar" scale="4" class="icon"></icon>
           <h2>{{beginDate}}</h2>
-          <icon name="clock-o" scale="4" class="icon"></icon> 
+          <icon name="clock-o" scale="4" class="icon"></icon>
           <h2>{{beginTime}}</h2>
 
-          <add-to-calendar 
-                :title="title" 
-                :location="place" 
+          <add-to-calendar
+                :title="title"
+                :location="place"
                 :start="new Date()"
                 :end="new Date()"
-                details="description" 
+                details="description"
                 inline-template>
             <span>
               <google-calendar id="google-calendar">
@@ -37,8 +37,17 @@
               <span>Перейти на оффициальный сайт</span>
             </button>
           </a>
+          <b-button  v-b-modal.modal_ok class="original-button" id="of-button1">
+            <span>Принять участие</span>
+          </b-button>
       </p>
       </b-card>
+
+      <b-modal id="modal_ok" title="Вы зарегестрированы">
+          <h3>Поздравляем!</h3>
+          Регистрация на событие прошла успешно!
+      </b-modal>
+
   </div>
 </template>
 
@@ -72,6 +81,9 @@ export default {
   padding: 10px 22px;
 }
 #of-button {
+  padding: 10px 20px;
+}
+#of-button1 {
   padding: 10px 20px;
 }
 
