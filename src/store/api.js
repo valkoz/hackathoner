@@ -10,7 +10,7 @@ export default {
       .catch((error) => Promise.reject(error))
   },
   post (url, request) {
-    return Vue.http.post(url, request)
+    return Vue.http.post(url, request, {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
       .then((response) => Promise.resolve(response))
       .catch((error) => Promise.reject(error))
   },

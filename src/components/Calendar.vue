@@ -37,13 +37,15 @@
               <span>Перейти на оффициальный сайт</span>
             </button>
           </a>
-          <b-button  v-b-modal.modal_ok class="original-button" id="of-button1">
-            <span>Принять участие</span>
+
+          <b-button class="original-button" @click="onEnroll" id="of-button1">
+              <span v-if="!enroll">Принять участие</span>
+              <span v-else>Отменить участие</span>
           </b-button>
       </p>
       </b-card>
 
-      <b-modal id="modal_ok" title="Вы зарегестрированы">
+      <b-modal id="modal_ok" ref = "enrollRef" title="Вы зарегестрированы">
           <h3>Поздравляем!</h3>
           Регистрация на событие прошла успешно!
       </b-modal>
@@ -54,7 +56,20 @@
 <script>
 export default {
   props: ['title', 'beginDateTime', 'beginDate', 'beginTime', 'place', 'status', 'officialSite'],
-  name: 'calendar'
+  name: 'calendar',
+  data: function () {
+    return {
+      enroll: false
+    }
+  },
+  methods: {
+    onEnroll: function() {
+      if (this.enroll == false)
+        this.$refs.enrollRef.show()
+      this.enroll = !this.enroll
+
+    }
+  }
 }
 </script>
 

@@ -5,27 +5,35 @@
     <b-navbar-brand href="#">Hackathoner</b-navbar-brand>
     <b-navbar-brand href="/static/about.html">About</b-navbar-brand>
     <b-button v-b-modal.modal_login variant="success" style="margin-left: 50px;">Войти</b-button>
-    <b-button v-b-modal.modal_register variant="success" style="margin-left: 10px;">Регистрация</b-button>
+    <b-button v-b-modal.modal_register variant="warning" style="margin-left: 10px;">Регистрация</b-button>
+    <b-button variant="danger" style="margin-left: 10px;" @click="onLogout" >Выйти</b-button>
   </b-navbar>
 
-  <b-modal id="modal_login" title="Войти">
+  <b-modal id="modal_login" ref = "loginRef" style="text-align:center;" hide-footer title="Войти">
     <b-form-input v-model="user_login"
                   type="text"
+                  required
                   placeholder="Введите логин"></b-form-input>
     <b-form-input v-model="user_password"
-                  type="text"
+                  type="password"
+                  required
+                  style="margin-top: 50px;"
                   placeholder="Введите пароль"></b-form-input>
+    <b-button variant="success" @click="onLogin" style="margin-top: 50px;"> OK </b-button>
 
   </b-modal>
 
-  <b-modal id="modal_register" title="Регистрация">
+  <b-modal id="modal_register" ref = "registerRef" style="text-align:center;"  hide-footer title="Регистрация">
     <b-form-input v-model="user_login"
                   type="text"
+                  required
                   placeholder="Введите логин"></b-form-input>
     <b-form-input v-model="user_password"
-                  type="text"
+                  type="password"
+                  style="margin-top: 50px;"
+                  required
                   placeholder="Введите пароль"></b-form-input>
-
+    <b-button variant="success" @click="onRegister" style="margin-top: 50px;"> OK </b-button>
   </b-modal>
 
 <b-row class="maincontent">
@@ -52,6 +60,19 @@ export default {
   computed: {
     hacks () {
       return this.$store.state.hacks
+    }
+  },
+  methods: {
+    onLogin: function() {
+      this.$store.dispatch('login', {name: this.user_login, pass: this.user_password})
+      this.$refs.loginRef.hide()
+    },
+    onRegister: function() {
+      this.$store.dispatch('register', {name: this.user_login, pass: this.user_password})
+      this.$refs.registerRef.hide()
+    },
+    onLogout: function() {
+      this.$store.dispatch('logout')
     }
   }
 }
