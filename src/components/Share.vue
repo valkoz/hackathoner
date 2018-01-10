@@ -2,7 +2,7 @@
   <div class="card-container">
       <b-card class="card" >
         <p class="card-text">
-          <social-sharing :url="url"
+          <social-sharing 
                               :title="title"
                               :description="place"
                               :quote="place"
