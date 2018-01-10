@@ -6,7 +6,7 @@
     <b-navbar-brand href="/static/about.html">About</b-navbar-brand>
   </b-navbar>
     <b-row class="maincontent">
-        <b-col xl="8" lg="7" md="6" sm="12" >
+        <b-col xl="8" lg="7" md="12" sm="12" >
           <b-card
               :img-src="currentHack.img_link"
               img-alt="Image"
@@ -20,7 +20,7 @@
           </p>
           </b-card>
         </b-col>
-        <b-col xl="4" lg="5" md="6" sm="12">
+        <b-col xl="4" lg="5" md="12" sm="12">
           <calendar
             v-bind:title="currentHack.name"
             v-bind:beginDateTime="currentHack.begin_date + ', ' + currentHack.start_time"

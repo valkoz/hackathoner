@@ -37,7 +37,7 @@
   </b-modal>
 
 <b-row class="maincontent">
-        <b-col xl="3" lg="4" md="6" sm="12" v-for="(hack, index) in hacks" :key="hack.hack_name">
+        <b-col xl="3" lg="4" md="12" sm="12" v-for="(hack, index) in hacks" :key="hack.hack_name">
           <card v-bind:imglink="hack.img_link"
                 v-bind:text="hack.description"
                 v-bind:title="hack.name"
