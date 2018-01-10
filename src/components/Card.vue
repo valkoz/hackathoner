@@ -1,15 +1,13 @@
 <template>
   <div class="card-container">
-      <b-card :title="title"
-          :img-src="imglink"
-          img-alt="Image"
-          img-top
-          tag="article"
-          class="card">
-      <p class="card-text">
-        {{text}}
-      </p>
-      <router-link :to="id" style="color: #4d6d9a;"><button class="original-button" id="more"><span>Подробнее</span></button></router-link>
+      <b-card :title="title"  :img-src="imglink" img-alt="Image"
+          img-top tag="article" class="card">
+      <p class="card-text"> {{text}} </p>
+      <router-link :to="id" style="color: #4d6d9a;">
+        <button class="original-button" id="more">
+          <span>Подробнее</span>
+        </button>
+      </router-link>
       </b-card>
   </div>
 </template>

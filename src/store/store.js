@@ -48,28 +48,28 @@ const store = new Vuex.Store({
   },
   actions: {
     getHacks (store) {
-      return api.get('http://82.199.101.40:80/hacks')
+      return api.get('https://hackathoner.ru/hacks')
         .then((response) => store.commit('GET_HACKS', response))
         .catch((error) => store.commit('API_FAIL', error))
     },
     getCurrentHack (store, payload) {
       //alert(payload.byId)
-      return api.get('http://82.199.101.40:80/hacks/by-id/' + payload.byId )
+      return api.get('https://hackathoner.ru/hacks/by-id/' + payload.byId )
         .then((response) => store.commit('GET_CURRENT_HACK', response))
         .catch((error) => store.commit('API_FAIL', error))
     },
     register (store, payload) {
-      return api.post('http://82.199.101.40:80/common/register', 'name=' + payload.name + '&pass=' + payload.pass)
+      return api.post('https://hackathoner.ru/common/register', 'name=' + payload.name + '&pass=' + payload.pass)
         .then((response) => store.commit('REGISTER', response))
         .catch((error) => store.commit('REG_FAIL', error))
     },
     login (store, payload) {
-      return api.post('http://82.199.101.40:80/common/login', 'name=' + payload.name + '&pass=' + payload.pass)
+      return api.post('https://hackathoner.ru/common/login', 'name=' + payload.name + '&pass=' + payload.pass)
         .then((response) => store.commit('LOGIN', response))
         .catch((error) => store.commit('LOGIN_FAIL', error))
     },
     logout (store, payload) {
-      return api.post('http://82.199.101.40:80/auth/logout', 'key=' + state.key)
+      return api.post('https://hackathoner.ru/auth/logout', 'key=' + state.key)
         .then((response) => store.commit('REGISTER', response))
         .catch((error) => store.commit('API_FAIL', error))
     },
