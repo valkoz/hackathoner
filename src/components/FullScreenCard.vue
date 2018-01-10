@@ -74,7 +74,8 @@ export default {
       return this.$store.state.currentHack
     },
     currentPage () {
-      return this.$route.query.page
+      let path = this.$route.query.page
+      return "hackathoner.ru" + "/#/" + this.id
     }
   },
   methods: {

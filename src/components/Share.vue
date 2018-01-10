@@ -8,25 +8,25 @@
                               :quote="place"
                               inline-template>
           <div class="share">
-            
+
               <network network="telegram">
-                <b-button class="original-button" style="height: 80px">
+                <button class="original-button" style="height: 80px">
                   <icon name="telegram" scale="4" style="margin-left: 10px; margin-right: 10px;"></icon>
-                </b-button>
+                </button>
               </network>
-            
+
               <network network="twitter">
-                <b-button class="original-button " style="height: 80px">
+                <button class="original-button " style="height: 80px">
                   <icon name="twitter" scale="4" style="margin-left: 10px; margin-right: 10px;"></icon>
-                </b-button>
+                </button>
               </network>
-            
+
               <network network="vk">
-                <b-button class="original-button" style="height: 80px">
-                  <icon name="vk" scale="4" style="margin-left: 10px; margin-right: 10px; "></icon>
-                </b-button>
+                <button class="original-button" style="height: 80px">
+                  <icon name="vk" scale="4" style="margin-top: 4px;  margin-left: 10px; margin-right: 10px; "></icon>
+                </button>
               </network>
-            
+
           </div>
         </social-sharing>
         </p>

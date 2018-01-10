@@ -38,10 +38,10 @@
             </button>
           </a>
 
-          <b-button class="original-button" @click="onEnroll" id="of-button1">
+          <button class="original-button" @click="onEnroll" id="of-button1">
               <span v-if="!enroll">Принять участие</span>
               <span v-else>Отменить участие</span>
-          </b-button>
+          </button>
       </p>
       </b-card>
 
